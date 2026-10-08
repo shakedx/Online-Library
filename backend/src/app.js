@@ -14,7 +14,7 @@ import { reviewsRouter } from './routes/reviews.js';
 export function createApp(options = {}) {
   const config = options.config ?? readConfig();
   const pool = options.pool ?? createPool(config.databaseUrl);
-  const app = express();
+  const app = options.app ?? express();
   app.locals.config = config;
   app.locals.pool = pool;
   if (process.env.VERCEL) app.set('trust proxy', 1);

@@ -1,6 +1,7 @@
+import express from 'express';
 import { createApp } from './backend/src/app.js';
 
-const app = createApp();
+const app = createApp({ app: express() });
 
 const port = Number(process.env.PORT || 3000);
 

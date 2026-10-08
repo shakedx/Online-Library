@@ -71,5 +71,26 @@ Development-БД `online_library` сохранена: 4 демонстрацио
 
 ## Размещение
 
-Локальная подготовка этапа 18 выполнена. Публичного deployment ещё нет: нужно создать Vercel-проект, подключить production PostgreSQL и Blob, задать переменные окружения и выполнить миграцию. Локальные записи и TXT автоматически в production не копируются.
+8 октября 2026 года проект опубликован:
+
+- GitHub: https://github.com/shakedx/Online-Library;
+- production: https://online-library-liard.vercel.app;
+- Vercel-проект `online-library` находится в Hobby-команде `Library`;
+- production PostgreSQL работает в Neon Free, регион `fra1`;
+- четыре TXT хранятся в private Vercel Blob `online-library-books`, регион `fra1`;
+- в production перенесены 2 постоянных аккаунта, 4 книги и существующие личные данные;
+- `SECRET_KEY`, `DATABASE_URL` и Blob-токен хранятся только в окружении Vercel.
+
+Для распознавания Express платформой `server.js` напрямую создаёт экземпляр Express и передаёт его в `createApp`. Это не меняет локальную архитектуру и позволяет оставить один и тот же entrypoint для разработки и Vercel Function.
+
+Проверки размещения:
+
+- production-сборка Vercel завершилась со статусом `READY`;
+- `/api/health` вернул 200 и `{"status":"ok"}`;
+- `/api/books` вернул 4 книги, прямой `/books/1` — React-приложение;
+- production E2E проверил регистрацию, вход, HttpOnly cookie, CSRF, чтение private TXT, избранное и отзыв;
+- временный QA-пользователь и его данные удалены после проверки;
+- локально повторно прошли 5 backend-тестов, 10 frontend-тестов, сборка, обе проверки `npm audit` и `npm run db:migrate`.
+
+Автоматический deploy из GitHub пока не подключён: Vercel требует добавить GitHub Login Connection. Текущий production задеплоен через Vercel CLI; повторный ручной deploy выполняется командой `vercel --prod`.
 
