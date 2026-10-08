@@ -1,0 +1,31 @@
+.shell { min-height: 100dvh; display: flex; flex-direction: column; }
+.header { background: #fff; border-bottom: 1px solid var(--line); }
+.headerInner { max-width: 1280px; min-height: 96px; padding: 18px 40px; margin: auto; display: flex; align-items: center; gap: 42px; }
+.brand { display: flex; align-items: center; gap: 13px; color: var(--green); flex-shrink: 0; font: 26px Georgia, serif; }
+.brandCaption { display: block; margin-top: 6px; font: 10px 'Segoe UI', sans-serif; letter-spacing: 1.1px; color: var(--muted); text-transform: uppercase; }
+.nav { display: flex; align-items: center; gap: 26px; flex-wrap: wrap; flex: 1; font-size: 14px; }
+.nav a { padding: 11px 0; white-space: nowrap; border-bottom: 2px solid transparent; }
+.nav a:hover { color: #7b5e29; }
+.nav .active { color: var(--green); border-color: var(--green); }
+.account { display: flex; align-items: center; gap: 10px; font-size: 14px; }
+.loginLink { border: 1px solid #b9c6bb; border-radius: 5px; padding: 10px 19px; white-space: nowrap; }
+.loginLink span { padding-left: 12px; }
+.loginLink:hover { background: #f2f5ef; }
+.avatar { background: #edf0e7; width: 34px; height: 34px; border-radius: 50%; display: grid; place-items: center; flex-shrink: 0; font-weight: 600; }
+.userName { max-width: 135px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.logout { border: none; background: none; color: var(--green); padding: 10px 4px; text-decoration: underline; text-underline-offset: 4px; }
+.headerError { color: #963726; max-width: 1200px; margin: 0 auto; padding: 0 24px 15px; }
+.muted { color: var(--muted); white-space: nowrap; font-size: 12px; }
+.main { flex: 1; outline: none; }
+.main:focus { outline: none; }
+.footer { max-width: 1200px; width: calc(100% - 80px); margin: 0 auto; padding: 25px 0; border-top: 1px solid var(--line); display: flex; justify-content: space-between; gap: 16px; color: var(--muted); font-size: 12px; }
+.footer span:first-child { font: 18px Georgia, serif; color: var(--green); }
+.sessionStatus { text-align: center; margin: 120px 24px; color: var(--muted); }
+.section { margin: 70px auto 110px; padding: 65px 45px; max-width: 900px; }
+.section h1 { font-size: clamp(34px, 5vw, 54px); line-height: 1.16; margin-bottom: 24px; }
+.section > p:not(.eyebrow) { max-width: 540px; color: var(--muted); line-height: 1.75; margin-bottom: 32px; }
+.eyebrow { text-transform: uppercase; letter-spacing: 2px; color: #7c6742; font-size: 11px; margin-bottom: 24px; }
+.skipLink { position: fixed; left: 12px; top: -100px; z-index: 10; padding: 12px; background: #fff; border: 1px solid var(--green); }
+.skipLink:focus { top: 12px; }
+@media (max-width: 1100px) { .headerInner { gap: 24px; padding: 18px 24px; flex-wrap: wrap; } .account { margin-left: auto; } .nav { order: 3; width: 100%; flex: auto; justify-content: center; } }
+@media (max-width: 600px) { .headerInner { padding: 16px 20px 9px; gap: 12px; } .brand { font-size: 23px; } .brandCaption { font-size: 8px; } .nav { gap: 22px; font-size: 12px; justify-content: flex-start; } .userName { max-width: 76px; } .avatar { display: none; } .footer { width: calc(100% - 40px); font-size: 11px; } .section { padding: 40px 24px; margin: 25px auto 60px; } }

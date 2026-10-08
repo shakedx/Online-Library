@@ -1,0 +1,29 @@
+{
+  "name": "online-library",
+  "private": true,
+  "version": "1.0.0",
+  "type": "module",
+  "engines": {
+    "node": ">=22.22.0"
+  },
+  "scripts": {
+    "dev": "node --watch server.js",
+    "start": "node server.js",
+    "build": "npm --prefix frontend ci && npm --prefix frontend run build",
+    "test": "node --test --test-concurrency=1 backend/tests/*.test.js && npm --prefix frontend test",
+    "db:migrate": "node backend/scripts/migrate.js",
+    "db:seed": "node backend/scripts/seed.js",
+    "admin:make": "node backend/scripts/make-admin.js"
+  },
+  "dependencies": {
+    "@vercel/blob": "2.8.1",
+    "cookie-session": "2.1.1",
+    "dotenv": "18.0.6",
+    "express": "5.2.1",
+    "multer": "2.4.0",
+    "pg": "8.23.1"
+  },
+  "devDependencies": {
+    "supertest": "7.3.1"
+  }
+}

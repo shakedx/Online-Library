@@ -1,0 +1,12 @@
+.git
+.idea
+.vscode
+**/.env
+**/.env.*
+!**/.env.example
+**/.pytest_cache
+**/node_modules
+backend/storage
+backend/tests
+frontend/tests
+*.log

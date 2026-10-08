@@ -1,0 +1,144 @@
+.page { max-width: 1280px; margin: 0 auto; padding: 48px 40px 80px; }
+.eyebrow { color: #7c6742; text-transform: uppercase; letter-spacing: 2px; font-size: 11px; margin-bottom: 20px; }
+.hero { display: grid; grid-template-columns: 1.3fr 1fr; align-items: center; gap: 50px; padding: 35px 20px 65px; }
+.hero h1 { font-size: clamp(40px, 4.5vw, 62px); line-height: 1.13; letter-spacing: -1.5px; margin-bottom: 23px; }
+.hero h1 em { color: #7c6742; font-weight: 400; }
+.hero p:not(.eyebrow) { color: var(--muted); line-height: 1.8; max-width: 420px; margin-bottom: 28px; }
+.heroBooks { position: relative; min-height: 300px; background: #e7ebdf; border-radius: 48% 48% 8px 8px; display: flex; align-items: center; justify-content: center; gap: 10px; padding: 25px; }
+.heroBooks span { display: flex; align-items: center; justify-content: center; border: 1px solid #fff6; outline: 8px solid #365746; background: #365746; color: #eeead6; height: 215px; width: 150px; padding: 18px; font: 23px/1.4 Georgia, serif; transform: rotate(-9deg); box-shadow: 12px 12px 0 #233c2530; }
+.heroBooks span + span { width: 135px; height: 190px; transform: rotate(12deg) translateY(15px); background: #a2774c; outline-color: #a2774c; }
+.pageHeading { margin: 15px 0 32px; }
+.pageHeading h1 { font-size: clamp(36px, 4vw, 52px); margin-bottom: 16px; }
+.pageHeading > p:last-child { color: var(--muted); line-height: 1.6; }
+.sectionHeading { display: flex; justify-content: space-between; gap: 20px; align-items: center; margin-bottom: 28px; }
+.sectionHeading h2 { margin: 0; font-size: 30px; }
+.sectionHeading a { font-size: 14px; white-space: nowrap; }
+.grid { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 36px 30px; }
+.card { min-width: 0; }
+.card h2 { font-size: 22px; line-height: 1.25; margin: 8px 0; overflow-wrap: anywhere; }
+.card a { display: block; }
+.card a:hover h2 { text-decoration: underline; text-decoration-thickness: 1px; text-underline-offset: 4px; }
+.cover { position: relative; aspect-ratio: 3 / 4; background: #e8e9df; padding: 22px; display: grid; place-items: center; border-radius: 7px; overflow: hidden; }
+.cover img { position: absolute; width: 100%; height: 100%; object-fit: contain; }
+.coverLettering { width: 100%; height: 100%; border: 1px solid #c4cdba; border-left-width: 5px; box-shadow: 5px 6px 0 #243e2220; padding: 22px 15px; background: #365746; color: #f0ecdc; display: flex; flex-direction: column; justify-content: space-between; text-align: center; }
+.coverLettering span:first-child { font: 13px/1.4 Georgia, serif; }
+.coverLettering strong { font: 25px/1.15 Georgia, serif; overflow-wrap: anywhere; }
+.coverLettering span:last-child { font-size: 8px; line-height: 1.6; text-transform: uppercase; letter-spacing: 1px; }
+.cover[data-tone='1'] { background: #eee5d8; }
+.cover[data-tone='1'] .coverLettering { background: #966c46; border-color: #d3bd9c; }
+.cover[data-tone='2'] { background: #e2e9eb; }
+.cover[data-tone='2'] .coverLettering { background: #4b6068; border-color: #a9bbc1; }
+.cover[data-tone='3'] { background: #eee4e1; }
+.cover[data-tone='3'] .coverLettering { background: #815850; border-color: #cfb1ab; }
+.genre { display: block; font-size: 11px; text-transform: uppercase; letter-spacing: 1.2px; color: #7c6742; margin: 19px 0 9px; overflow-wrap: anywhere; }
+.author { font-size: 14px; color: var(--muted); margin-bottom: 0; line-height: 1.5; overflow-wrap: anywhere; }
+.filters { display: grid; grid-template-columns: 2fr 1fr auto auto; gap: 16px; align-items: end; background: #fff; border: 1px solid var(--line); border-radius: 8px; padding: 22px; }
+.filters label { font-size: 13px; display: grid; gap: 8px; }
+.filters input { padding: 13px; border: 1px solid #bcc7bb; border-radius: 4px; background: #fff; min-height: 48px; }
+.filters > a { font-size: 13px; align-self: center; padding-top: 23px; }
+.filterHint { grid-column: 1 / -1; color: var(--muted); font-size: 12px; }
+.resultCount { margin: 28px 0 25px; color: var(--muted); font-size: 13px; }
+.secondary, .danger { display: inline-flex; justify-content: center; align-items: center; border: 1px solid #bcc7bb; padding: 11px 16px; border-radius: 5px; background: transparent; color: var(--green); min-height: 44px; font-size: 14px; }
+.secondary:hover:not(:disabled) { background: #e9eee3; }
+.secondary[aria-pressed='true'] { background: #e0e9da; border-color: #65846b; }
+.danger { color: #963726; border-color: #cfa093; }
+.pagination { display: flex; align-items: center; justify-content: center; gap: 24px; margin-top: 45px; font-size: 14px; }
+.empty, .state { text-align: center; padding: 55px 20px; color: var(--muted); line-height: 1.7; }
+.empty h2 { color: var(--green); font-size: 30px; }
+.error { padding: 20px; margin: 20px 0; color: #873424; background: #fff1ea; border: 1px solid #e0c6ba; border-radius: 6px; line-height: 1.5; overflow-wrap: anywhere; }
+.error p:last-child { margin-bottom: 0; }
+.back { display: inline-block; color: var(--muted); font-size: 14px; margin-bottom: 32px; }
+.back:hover { color: var(--green); text-decoration: underline; }
+.bookDetail { display: grid; grid-template-columns: 300px 1fr; gap: 60px; align-items: start; }
+.bookInfo { min-width: 0; }
+.bookInfo > .genre { margin-top: 0; }
+.bookInfo h1 { font-size: clamp(34px, 4vw, 50px); line-height: 1.18; margin: 12px 0; overflow-wrap: anywhere; }
+.bookAuthor { font-size: 20px; color: var(--muted); overflow-wrap: anywhere; }
+.metadata { display: flex; gap: 42px; font-size: 13px; margin: 25px 0; }
+.metadata dt { color: var(--muted); margin-bottom: 7px; }
+.metadata dd { margin: 0; overflow-wrap: anywhere; }
+.description { line-height: 1.8; color: #4b5a50; white-space: pre-wrap; overflow-wrap: anywhere; margin-bottom: 25px; }
+.bookActions { margin-top: 20px; }
+.actions { display: flex; align-items: center; flex-wrap: wrap; gap: 10px; }
+.notice { background: #eaf0e2; padding: 13px 17px; border-radius: 4px; font-size: 14px; margin: 15px 0; line-height: 1.5; }
+.hint { color: var(--muted); font-size: 12px; font-weight: 400; line-height: 1.6; }
+.bookActions > .hint { margin-top: 14px; }
+.signInPrompt { color: var(--muted); font-size: 14px; line-height: 1.7; padding: 18px 0; }
+.reviews { margin-top: 65px; border-top: 1px solid var(--line); padding-top: 35px; }
+.reviews .sectionHeading { margin-bottom: 15px; }
+.average { color: #83632e; white-space: nowrap; font-size: 18px; }
+.reviewForm { background: #fff; border: 1px solid var(--line); border-radius: 8px; padding: 25px; margin: 25px 0; }
+.reviewForm h3 { font: 23px Georgia, serif; margin: 0 0 25px; }
+.ratingField { padding: 0; margin: 0; border: 0; min-width: 0; }
+.ratingField legend { font-size: 14px; padding: 0; }
+.ratingChoices { display: flex; gap: 6px; margin: 10px 0 20px; }
+.ratingChoices label { position: relative; font-size: 34px; color: #bfc5b8; width: 44px; height: 44px; cursor: pointer; display: grid; place-items: center; border-radius: 3px; }
+.ratingChoices input { position: absolute; opacity: 0; width: 100%; height: 100%; margin: 0; cursor: pointer; }
+.ratingChoices label:focus-within { outline: 3px solid #b48036; outline-offset: 2px; }
+.ratingChoices .filledStar { color: #a6762c; }
+.ratingChoices label:hover { background: #f5f0e6; }
+.commentLabel { display: block; font-size: 14px; }
+.commentLabel textarea { display: block; width: 100%; resize: vertical; border: 1px solid #bcc7bb; border-radius: 5px; padding: 14px; margin: 10px 0 18px; min-height: 110px; color: inherit; }
+.review { padding: 26px 0; border-bottom: 1px solid var(--line); }
+.reviewHeading { display: flex; align-items: center; justify-content: space-between; gap: 15px; margin-bottom: 8px; }
+.reviewHeading strong { overflow-wrap: anywhere; min-width: 0; }
+.stars { color: #a6762c; letter-spacing: 3px; white-space: nowrap; }
+.emptyStars { color: #c3c9bd; }
+.reviewText { white-space: pre-wrap; overflow-wrap: anywhere; line-height: 1.8; margin: 17px 0; }
+.ownReview { margin-top: 20px; }
+.listItem { display: flex; flex-direction: column; gap: 15px; min-width: 0; }
+.listItem > .hint { margin: auto 0 0; }
+.listItem > button { align-self: flex-start; }
+.readerPage { max-width: 900px; padding: 40px 30px 75px; margin: auto; }
+.reader { background: #fffdf7; border: 1px solid #e4e2d8; padding: 55px; border-radius: 6px; }
+.reader header { text-align: center; padding-bottom: 35px; margin-bottom: 35px; border-bottom: 1px solid var(--line); }
+.reader h1 { font-size: clamp(30px, 4vw, 43px); overflow-wrap: anywhere; }
+.reader header > p:last-child { color: var(--muted); overflow-wrap: anywhere; }
+.readerText { white-space: pre-wrap; overflow-wrap: anywhere; font: 20px/1.9 Georgia, serif; color: #333e33; }
+.reader footer { border-top: 1px solid var(--line); margin-top: 45px; padding-top: 30px; font-size: 14px; line-height: 1.7; }
+@media (max-width: 1000px) {
+  .page { padding: 35px 24px 65px; }
+  .grid { grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 28px 24px; }
+  .hero { padding: 20px 0 50px; gap: 28px; }
+  .heroBooks { padding: 22px; }
+  .heroBooks span { width: 125px; font-size: 20px; }
+  .heroBooks span + span { width: 115px; }
+  .bookDetail { grid-template-columns: 240px 1fr; gap: 35px; }
+  .filters { grid-template-columns: 2fr 1fr auto; }
+  .filters > a { padding-top: 0; }
+}
+@media (max-width: 650px) {
+  .page { padding: 28px 20px 55px; }
+  .hero { grid-template-columns: 1fr; padding-top: 0; }
+  .heroBooks { display: none; }
+  .hero h1 { font-size: 42px; }
+  .grid { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 27px 16px; }
+  .cover { padding: 12px; }
+  .coverLettering { padding: 12px 7px; }
+  .coverLettering strong { font-size: 19px; }
+  .coverLettering span:first-child { font-size: 10px; }
+  .coverLettering span:last-child { font-size: 6px; letter-spacing: .4px; }
+  .card h2 { font-size: 20px; }
+  .author { font-size: 12px; }
+  .sectionHeading { align-items: flex-start; }
+  .sectionHeading h2 { font-size: 25px; }
+  .filters { grid-template-columns: 1fr; padding: 18px; gap: 15px; }
+  .filters > a { justify-self: center; }
+  .pagination { gap: 12px; flex-wrap: wrap; font-size: 12px; }
+  .pagination .secondary { padding: 10px; }
+  .bookDetail { grid-template-columns: 1fr; gap: 28px; }
+  .bookDetail > .cover { width: 230px; margin: auto; padding: 20px; }
+  .bookDetail .coverLettering strong { font-size: 25px; }
+  .bookDetail .coverLettering span:first-child { font-size: 13px; }
+  .metadata { gap: 25px; flex-wrap: wrap; }
+  .reviewForm { padding: 20px 16px; }
+  .reviews .sectionHeading { flex-wrap: wrap; gap: 10px; }
+  .reviewHeading { flex-wrap: wrap; }
+  .readerPage { padding: 28px 16px 50px; }
+  .reader { padding: 30px 20px; }
+  .readerText { font-size: 18px; line-height: 1.85; }
+}
+@media (max-width: 370px) {
+  .grid { grid-template-columns: 1fr; max-width: 260px; margin: auto; }
+  .coverLettering strong { font-size: 25px; }
+}

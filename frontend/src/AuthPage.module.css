@@ -1,0 +1,52 @@
+.page { max-width: 1120px; padding: 36px 30px 68px; margin: 0 auto; }
+.breadcrumb { display: flex; gap: 12px; font-size: 12px; color: var(--muted); margin-bottom: 30px; }
+.breadcrumb a:hover { text-decoration: underline; }
+.breadcrumb span:last-child { color: #334c3c; }
+.card { display: grid; grid-template-columns: .93fr 1.07fr; border: 1px solid #dfe4da; border-radius: 12px; overflow: hidden; background: #fff; box-shadow: 0 12px 44px #1f362b06; }
+.story { background: #294f40; color: #f7f4e8; position: relative; overflow: hidden; padding: 44px 46px 32px; display: flex; flex-direction: column; min-height: 580px; }
+.storyLabel { font-size: 10px; text-transform: uppercase; letter-spacing: 1.6px; display: flex; gap: 9px; align-items: center; color: #d7dec9; margin-bottom: 32px; }
+.storyLabel > span { font-size: 23px; color: #d7b57b; }
+.story h2 { font-size: clamp(40px, 4.8vw, 60px); line-height: 1.08; letter-spacing: -.8px; margin-bottom: 24px; z-index: 1; }
+.story h2 em { color: #dcb985; font-weight: 400; }
+.story > p { font-size: 14px; line-height: 1.8; color: #d0dbd0; z-index: 1; }
+.storyFoot { margin-top: auto; padding-top: 205px; font-size: 10px; letter-spacing: .4px; color: #c5d1c5; z-index: 1; }
+.books { position: absolute; bottom: 58px; right: 24px; width: 295px; height: 198px; transform: rotate(-7deg); }
+.books::before { content: ''; position: absolute; width: 310px; height: 310px; border: 1px solid #c3d0b623; border-radius: 50%; left: -36px; bottom: -48px; }
+.books::after { content: ''; position: absolute; width: 340px; height: 340px; border: 1px solid #c3d0b61a; border-radius: 50%; left: -51px; bottom: -63px; }
+.books > div { position: absolute; border-radius: 4px 8px 8px 4px; box-shadow: 6px 9px 14px #112a2140; border-left: 5px solid #00000016; }
+.bookOne { background: #d6b27a; width: 113px; height: 170px; left: 22px; top: 5px; transform: rotate(-16deg); color: #584832; padding: 20px 14px; }
+.bookOne > span { display: block; border: 1px solid #7f623e99; height: 111px; text-align: center; font: 62px/108px Georgia, serif; }
+.bookTwo { background: #dce2d4; width: 101px; height: 160px; left: 98px; top: 20px; transform: rotate(6deg); padding: 30px 19px; }
+.bookTwo i { display: block; width: 54px; height: 25px; border: 1px solid #5b725f77; border-radius: 50% 50% 0 0; margin-bottom: 5px; }
+.bookThree { background: #ad6045; width: 107px; height: 164px; left: 175px; top: 34px; transform: rotate(21deg); padding: 23px 15px; color: #f8e3c5; }
+.bookThree > span { display: block; border-top: 1px solid #e2bfa57c; border-bottom: 1px solid #e2bfa57c; padding: 23px 0; font: 24px/1.18 Georgia, serif; }
+.formPanel { padding: 36px 50px 30px; }
+.tabs { display: flex; gap: 28px; border-bottom: 1px solid var(--line); font-size: 14px; }
+.tabs a { padding: 0 0 15px; color: var(--muted); border-bottom: 2px solid transparent; margin-bottom: -1px; }
+.tabs a[aria-current] { border-color: var(--green); color: var(--green); font-weight: 600; }
+.intro { margin: 36px 0 28px; }
+.eyebrow { display: block; text-transform: uppercase; letter-spacing: 1.6px; font-size: 10px; color: #85734e; margin-bottom: 14px; }
+.intro h1 { font-size: clamp(28px, 3vw, 38px); line-height: 1.15; letter-spacing: -.8px; margin-bottom: 12px; }
+.intro p { color: var(--muted); font-size: 13px; line-height: 1.6; margin: 0; }
+.fields { border: 0; padding: 0; margin: 0; min-width: 0; display: flex; flex-direction: column; gap: 20px; }
+.fields label { display: flex; flex-direction: column; gap: 9px; font-size: 12px; font-weight: 600; }
+.fields input { height: 47px; border: 1px solid #d1d9cf; background: #fff; padding: 0 14px; border-radius: 5px; color: #273a2e; font-weight: 400; font-size: 14px; }
+.fields input::placeholder { color: #899189; }
+.fields input:focus { border-color: var(--green); outline: 2px solid #294f4026; outline-offset: 1px; }
+.fields:disabled { opacity: .7; }
+.passwordField { position: relative; display: flex; }
+.passwordField input { padding-right: 48px; }
+.showPassword { position: absolute; right: 1px; top: 1px; height: 45px; width: 45px; background: none; border: none; display: grid; place-items: center; color: #768476; border-radius: 4px; }
+.showPassword:hover { color: var(--green); background: #f1f4ed; }
+.hint { color: var(--muted); font-size: 11px; margin: -12px 0 -3px; }
+.submit { justify-content: space-between; width: 100%; margin-top: 6px; font-size: 13px; }
+.submit > span { font-size: 21px; font-weight: 400; }
+.switch { text-align: center; margin: 22px 0 0; color: var(--muted); font-size: 12px; line-height: 1.8; }
+.switch a { color: var(--green); font-weight: 600; text-decoration: underline; text-underline-offset: 4px; margin-left: 4px; }
+.note { display: flex; align-items: center; gap: 8px; justify-content: center; margin-top: 38px; border-top: 1px solid var(--line); padding-top: 20px; color: #788175; font-size: 10px; line-height: 1.7; }
+.note > span { font-size: 20px; color: #91a288; }
+.error, .success { padding: 12px 14px; font-size: 13px; line-height: 1.6; border-radius: 5px; margin: -4px 0 20px; }
+.error { background: #fff2ed; border: 1px solid #e8c9ba; color: #963c28; }
+.success { background: #f0f6ea; border: 1px solid #cbdcc3; color: #345136; }
+@media (max-width: 850px) { .story { padding: 32px 28px; } .formPanel { padding: 32px 28px; } .storyLabel { letter-spacing: .7px; font-size: 9px; } .books { right: -15px; transform: scale(.9) rotate(-7deg); } }
+@media (max-width: 650px) { .page { padding: 24px 20px 42px; } .breadcrumb { margin-bottom: 22px; } .card { grid-template-columns: 1fr; } .story { display: none; } .formPanel { padding: 28px 24px; } .intro { margin-top: 30px; } .intro h1 { font-size: 32px; } .note { margin-top: 28px; } }

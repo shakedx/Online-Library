@@ -1,0 +1,22 @@
+# Локальные настройки и секреты
+.env
+.env.*
+!.env.example
+.idea/
+.vscode/
+.pytest_cache/
+
+# Зависимости и сборка
+node_modules/
+dist/
+public/
+.vercel/
+
+# Загруженные книги
+backend/storage/
+
+# Локальные файлы
+*.log
+.DS_Store
+Thumbs.db
+
