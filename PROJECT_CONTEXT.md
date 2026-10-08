@@ -92,5 +92,5 @@ Development-БД `online_library` сохранена: 4 демонстрацио
 - временный QA-пользователь и его данные удалены после проверки;
 - локально повторно прошли 5 backend-тестов, 10 frontend-тестов, сборка, обе проверки `npm audit` и `npm run db:migrate`.
 
-Автоматический deploy из GitHub пока не подключён: Vercel требует добавить GitHub Login Connection. Текущий production задеплоен через Vercel CLI; повторный ручной deploy выполняется командой `vercel --prod`.
+Репозиторий `shakedx/Online-Library` подключён к Vercel. Каждый push в `main` запускает production-deploy автоматически; при необходимости ручной deploy выполняется командой `vercel --prod`.
 
